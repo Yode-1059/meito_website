@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+
+$color-gray: #707070;
+$color-whitegray: #F2F0F0;
+
+@function rem($v) {
+    @return ($v/16)+rem;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin inner() {
+    &__inner {
+        max-width: 1200px;
+        width: (560/640)*100%;
+        margin: auto;
+    }
+}
+
+@mixin link() {
+    text-decoration: none
+}
+
+html {
+    font-size: (16/16)*100%;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', ヒラギノ角ゴ ProN, sans-serif;
+    font-weight: lighter
+}
+
+img {
+    width: auto;
+    height: auto;
+    flex: 1;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+//header
+
+.header {
+    @include inner();
+
+    padding-bottom: rem(15);
+    border-bottom: #707070 1px solid;
+
+    &__content {
+        @include flex();
+        padding-top: rem(15);
+    }
+
+    &__list {
+        @include flex();
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%
+    }
+
+    &__link {
+        @include link();
+        color: $color-gray;
+        width: 100%;
+        display: block;
+        font-size: rem(14);
+    }
+
+    &__nav {
+        width: 100%;
+    }
+
+    &__other {
+        list-style: none;
+        width: 30%;
+        align-content: center;
+        @include flex();
+    }
+
+    &__btn {
+        padding: rem(5) rem(10);
+        background-color: $color-whitegray;
+        color: $color-gray;
+        width: rem(160);
+        text-align: center;
+    }
+}
+
+//mainvisual
+
+.mainvisual {
+    @include inner();
+
+    &__content {
+        @include flex();
+        padding-top: rem(32);
+        align-items: center;
+    }
+
+    &__img {
+        width: 60%;
+        height: auto;
+    }
+}

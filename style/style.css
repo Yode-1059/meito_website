@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap");
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "M PLUS Rounded 1c", ヒラギノ角ゴ ProN, sans-serif;
+  font-weight: lighter;
+}
+
+img {
+  width: auto;
+  height: auto;
+  flex: 1;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header {
+  padding-bottom: 0.9375rem;
+  border-bottom: #707070 1px solid;
+}
+.header__inner {
+  max-width: 1200px;
+  width: 87.5%;
+  margin: auto;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 0.9375rem;
+}
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.header__link {
+  text-decoration: none;
+  color: #707070;
+  width: 100%;
+  display: block;
+  font-size: 0.875rem;
+}
+.header__nav {
+  width: 100%;
+}
+.header__other {
+  list-style: none;
+  width: 30%;
+  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header__btn {
+  padding: 0.3125rem 0.625rem;
+  background-color: #F2F0F0;
+  color: #707070;
+  width: 10rem;
+  text-align: center;
+}
+
+.mainvisual__inner {
+  max-width: 1200px;
+  width: 87.5%;
+  margin: auto;
+}
+.mainvisual__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  align-items: center;
+}
+.mainvisual__img {
+  width: 60%;
+  height: auto;
+}
+/*# sourceMappingURL=style.css.map */
