@@ -8,6 +8,12 @@ $color-whitegray: #F2F0F0;
     @return ($v/16)+rem;
 }
 
+@mixin mq-mb {
+    @media (max-width:800px) {
+        @content;
+    }
+}
+
 @mixin flex {
     display: flex;
     justify-content: space-between;
@@ -16,14 +22,30 @@ $color-whitegray: #F2F0F0;
 
 @mixin inner() {
     &__inner {
-        max-width: 1200px;
+        max-width: 1350px;
         width: (560/640)*100%;
         margin: auto;
     }
 }
 
 @mixin link() {
-    text-decoration: none
+    text-decoration: none;
+    display: block;
+}
+
+@mixin title() {
+    font-size: rem(34);
+    text-align: center;
+}
+
+.btn {
+    padding: rem(5) rem(16);
+    border: #707070 solid 1px;
+    @include link();
+    width: auto;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
 }
 
 html {
@@ -63,7 +85,19 @@ img {
         list-style: none;
         padding: 0;
         margin: 0;
-        width: 100%
+        width: 100%;
+
+        @include mq-mb() {
+            display: none
+        }
+    }
+
+    &__hum {
+        display: none;
+
+        @include mq-mb() {
+            display: block
+        }
     }
 
     &__link {
@@ -71,7 +105,7 @@ img {
         color: $color-gray;
         width: 100%;
         display: block;
-        font-size: rem(14);
+        font-size: rem(18);
     }
 
     &__nav {
@@ -86,11 +120,40 @@ img {
     }
 
     &__btn {
-        padding: rem(5) rem(10);
+        padding: 18px 0;
         background-color: $color-whitegray;
         color: $color-gray;
-        width: rem(160);
+        width: rem(200);
         text-align: center;
+    }
+}
+
+//footer
+
+.footer {
+    @include inner();
+
+    border-top: $color-gray solid 1px;
+    padding: rem(25) 0;
+
+    &__content {
+        @include flex();
+
+        @include mq-mb() {
+            display: block;
+        }
+    }
+
+    &__logo {
+        width: 40px
+    }
+
+    &__nav {
+        @include flex();
+
+        @include mq-mb() {
+            display: block;
+        }
     }
 }
 
@@ -100,13 +163,155 @@ img {
     @include inner();
 
     &__content {
-        @include flex();
-        padding-top: rem(32);
+        padding: rem(32) 0;
         align-items: center;
+    }
+
+    &__flex {
+        @include flex();
+        flex-direction: row-reverse;
+
+        @include mq-mb() {
+            display: block;
+        }
     }
 
     &__img {
         width: 60%;
         height: auto;
+
+        @include mq-mb() {
+            width: 100%;
+        }
+    }
+
+    &__txt {
+        text-align: center;
+        background-color: $color-whitegray;
+        padding: rem(16) 0;
+    }
+}
+
+.active {
+    @include inner();
+
+    &__title {
+        @include title();
+        margin-bottom: rem(30);
+    }
+}
+
+//card
+
+.card {
+    @include flex();
+    margin-bottom: 100px;
+
+    @include mq-mb() {
+        display: block;
+    }
+
+    &:nth-child(1) {
+        flex-direction: row-reverse;
+    }
+
+    &__content {
+        width: 45%;
+
+        @include mq-mb() {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        width: 45%;
+
+        @include mq-mb() {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        padding: 1rem;
+        font-size: rem(20);
+        background-color: $color-whitegray;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        padding: 1rem;
+        font-size: rem(20);
+        background-color: $color-whitegray;
+    }
+}
+
+//info
+
+.info {
+    @include inner();
+
+    @include mq-mb() {
+        display: block;
+    }
+
+    &__title {
+        @include title();
+        margin-bottom: rem(30);
+    }
+
+    &__content {
+        @include flex();
+    }
+
+    &__note {
+        width: 55%;
+
+        @include mq-mb() {
+            width: 100%;
+        }
+    }
+
+    &__twitter {
+        width: 40%;
+
+        @include mq-mb() {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        margin: 0 auto 0 0;
+        border: 3px solid black;
+        text-align: center;
+
+        &__ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        &__li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px dashed black;
+        }
+    }
+}
+
+//about
+
+.about {
+    @include inner();
+
+}
+
+.aboutus {
+    &__title {
+        @include title()
+    }
+}
+
+.feel {
+    &__title {
+        @include title()
     }
 }
