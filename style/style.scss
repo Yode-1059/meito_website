@@ -1,22 +1,40 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap");
 
-$color-gray: #707070;
+$color-base: #fff;
 $color-whitegray: #f2f0f0;
-$color-btn-bg: black;
+$color-accent: #f9b248;
+$color-bg: #fbfff2;
+$color-main: #5e9296;
+$color-font-g: #1c767c;
+$color-font-b: #393939;
+$color-sub: #f0f7e9;
+$color-line: #d0e0e2;
 
 @function rem($v) {
   @return ($v/16) + rem;
 }
 
 @mixin mq-mb {
-  @media (max-width: 800px) {
+  @media (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin mq-pctab {
+  @media (min-width: 750px) {
+    @content;
+  }
+}
+
+@mixin mq-tab {
+  @media (max-width: 1030px) {
     @content;
   }
 }
 
 @mixin mq-pc {
-  @media (min-width: 800px) {
+  @media (min-width: 1030px) {
     @content;
   }
 }
@@ -32,6 +50,10 @@ $color-btn-bg: black;
     max-width: 1350px;
     width: (560/640) * 100%;
     margin: auto;
+    @include mq-pc() {
+      width: 80%;
+      margin: auto;
+    }
   }
 }
 
@@ -40,39 +62,108 @@ $color-btn-bg: black;
   display: inline-block;
 }
 
-@mixin title() {
-  font-size: 26px;
+@mixin title($t: 26px) {
+  font-size: $t;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+@mixin sec_mb() {
+  margin-bottom: 150px;
+}
+
+@mixin dl($fs: 12) {
+  @include mq-mb() {
+    margin-bottom: 20px;
+  }
+  font-size: $fs + px;
+  @include mq-pc() {
+    font-size: ($fs + 2) + px;
+  }
+  &__title {
+    font-size: ($fs + 2) + px;
+    @include mq-pc() {
+      font-size: ($fs + 6) + px;
+    }
+    margin-bottom: 20px;
+  }
+  &__address {
+    margin-bottom: ($fs + 2) + px;
+  }
+  &__dl {
+    @include flex(flex-start);
+    margin-bottom: ($fs + 2) + px;
+  }
+  &__dt {
+    width: ($fs * 4) + px;
+    display: block;
+  }
 }
 
 .btn {
   @include link();
   font-size: 14px;
-  padding: 15px 30px;
+  padding: 12px 30px;
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: $color-btn-bg;
+  background-color: $color-accent;
   border-radius: 25px;
   margin: 0 auto;
+  line-height: 1.7;
+}
+
+.btn-c {
+  @include link();
+  font-size: 14px;
+  padding: 8px 30px;
+  text-align: center;
+  color: $color-accent;
+  background-color: $color-base;
+  border-radius: 99999px;
+  border: $color-accent 1.5px solid;
+  margin: 0 auto;
+  line-height: 1.7;
+  @include mq-mb() {
+    width: 100%;
+  }
+}
+
+.bread {
+  margin-top: 16px;
+  @include flex(flex-start);
+  & a {
+    color: $color-font-b;
+    text-decoration: none;
+  }
 }
 
 html {
   font-size: 14px;
+  @include mq-pc() {
+    font-size: 16px;
+  }
 }
 
 body {
-  font-family: "Yu Gothic", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: lighter;
+  background-color: $color-base;
+  color: $color-font-b;
 }
 
 img {
-  width: auto;
+  width: 100%;
   height: auto;
   flex: 1;
   display: block;
   margin: 0 auto;
   max-width: 100%;
   object-fit: contain;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
 }
 
 //header
@@ -110,7 +201,6 @@ img {
 
   &__link {
     @include link();
-    color: $color-gray;
     width: 100%;
     display: block;
     font-size: rem(18);
@@ -130,7 +220,6 @@ img {
   &__btn {
     padding: 18px 0;
     background-color: $color-whitegray;
-    color: $color-gray;
     width: rem(200);
     text-align: center;
   }
@@ -139,59 +228,112 @@ img {
 //footer
 
 .footer {
+  background-color: $color-main;
   @include inner();
-
-  border-top: $color-gray solid 1px;
-  padding: rem(25) 0;
-
   &__content {
-    @include flex();
-
+    padding: 50px 0 25px;
+    color: $color-base;
+    width: 80%;
+    margin: auto;
     @include mq-mb() {
       display: block;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 50px;
+    @include mq-pc() {
+      text-align: center;
+      font-size: 36px;
+    }
+  }
+
+  &__flex {
+    @include mq-pc() {
+      @include flex();
     }
   }
 
   &__logo {
     width: 40px;
+    margin-right: 15px;
   }
 
-  &__nav {
-    @include flex();
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-weight: bold;
+    @include mq-pc() {
+      font-size: 24px;
+      font-weight: normal;
+      margin-bottom: 70px;
+    }
+  }
 
-    @include mq-mb() {
-      display: block;
+  &__item {
+    @include mq-pc() {
+      width: 42%;
     }
   }
 
   &__info {
-    @include mq-mb() {
-      margin-bottom: 60px;
+    @include dl();
+  }
+
+  &__sns {
+    @include flex($jc: flex-start);
+    align-items: center;
+    margin-bottom: 60px;
+    &__link {
+      box-sizing: border-box;
+      width: 2.5em;
+      margin-right: 10px;
+      &:last-child {
+        width: 9rem;
+      }
+    }
+  }
+
+  &__nav {
+    display: block;
+    @include mq-pc() {
+      @include flex();
+      width: 44%;
     }
 
-    &__top {
-      display: flex;
+    &__ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 50px;
+      @include mq-pc() {
+        margin-left: 8%;
+      }
+    }
+
+    &__li {
+      @include flex($jc: flex-start);
       align-items: center;
-      margin-bottom: 24px;
-    }
-    &__title {
-      font-size: 16px;
-      font-weight: normal;
       margin-bottom: 20px;
-    }
-
-    &__address {
-      margin-bottom: 14px;
-      font-size: 12px;
-    }
-    &__dl {
-      font-size: 12px;
-      @include flex(flex-start);
-      margin-bottom: 14px;
-    }
-    &__dt {
-      width: 48px;
-      display: block;
+      & a {
+        text-decoration: none;
+        color: $color-base;
+        font-size: 16px;
+        @include mq-pc() {
+          font-size: 18px;
+        }
+      }
+      &::before {
+        display: flex;
+        content: "";
+        width: 1em;
+        height: 3px;
+        border-radius: 10px;
+        background-color: $color-accent;
+        margin-right: 10px;
+      }
     }
   }
 
@@ -208,11 +350,15 @@ img {
     @include inner();
   }
 
-  margin-bottom: 150px;
-
+  @include sec_mb;
   &__catch {
     @include title();
     padding: 11px 0;
+    &:first-of-type {
+      font-size: 18px;
+      color: $color-font-g;
+      margin-bottom: 0;
+    }
   }
 
   &__content {
@@ -251,16 +397,15 @@ img {
 
   &__txt {
     text-align: center;
-    padding: 30px 0;
+    padding-bottom: 20px;
   }
 }
 
 .active {
   @include inner();
-  margin-bottom: 150px;
+  @include sec_mb;
   &__title {
     @include title();
-    margin-bottom: rem(30);
   }
 }
 
@@ -299,6 +444,7 @@ img {
   &__title {
     padding: 16px 0;
     font-size: 22px;
+    color: $color-font-g;
   }
 
   &__text {
@@ -336,7 +482,7 @@ img {
     @include mq-mb() {
       width: 100%;
     }
-    margin-bottom: 150px;
+    @include sec_mb;
   }
 
   &__twitter {
@@ -345,7 +491,7 @@ img {
     @include mq-mb() {
       width: 100%;
     }
-    margin-bottom: 150px;
+    @include sec_mb;
   }
 
   &__list {
@@ -361,9 +507,19 @@ img {
       padding: 0;
     }
 
+    & a {
+      width: fit-content;
+      margin: auto;
+      text-align: center;
+    }
     &__li {
+      width: 100%;
+      height: 5rem;
+      @include flex();
+      text-align: center;
+      align-items: center;
       list-style: none;
-      padding: 10px 0;
+      padding: 10px 20px;
       border-bottom: 1px dashed black;
     }
   }
@@ -373,16 +529,193 @@ img {
 
 .about {
   @include inner();
+  &__title {
+    @include title(28px);
+    color: $color-font-g;
+  }
 }
 
 .aboutus {
+  &__content {
+    text-align: center;
+    margin-bottom: 80px;
+    display: block;
+    font-size: 18px;
+    & img {
+      border-radius: 5px;
+    }
+    &:first-of-type {
+      margin-top: 80px;
+    }
+  }
+
   &__title {
     @include title();
   }
 }
 
 .feel {
+  margin-bottom: 173px;
   &__title {
     @include title();
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    padding: 30px 24px;
+    border-radius: 20px;
+    background-color: $color-sub;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 24px;
+      width: 50px;
+      background-color: $color-sub;
+      clip-path: polygon(70% 0, 0 0, 100% 100%);
+      bottom: -24px;
+      right: 9px;
+    }
+  }
+
+  &__name {
+    text-align: right;
+  }
+}
+
+//summary
+
+.summary {
+  @include sec_mb;
+  &__title {
+    @include title();
+  }
+  font-size: 16px;
+  &__state {
+    display: block;
+  }
+
+  &__dl {
+    margin-bottom: 20px;
+    border-top: $color-font-g 1px solid;
+    letter-spacing: 0.04em;
+    @include mq-pctab() {
+      @include flex($jc: flex-start);
+      margin: 0;
+      &:last-of-type {
+        border-bottom: $color-font-g 1px solid;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__dt {
+    display: block;
+    font-size: 16px;
+    background-color: $color-sub;
+    color: $color-font-g;
+    font-weight: bold;
+    padding: 12px;
+    @include mq-pctab() {
+      padding: 24px 0;
+      width: 10em;
+      margin: 0;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  &__dd {
+    padding-left: 12px;
+    padding-top: 12px;
+    & span {
+      display: none;
+    }
+    & br {
+      height: 0;
+    }
+    @include mq-pctab() {
+      display: flex;
+      padding: 0;
+      align-items: center;
+      margin-left: 40px;
+      & br {
+        display: none;
+      }
+      & span {
+        display: block;
+        width: 1em;
+      }
+    }
+
+    & a {
+      color: $color-font-g;
+    }
+  }
+}
+
+//map
+
+//link
+
+.link {
+  @include sec_mb();
+  &__content {
+    padding: 30px 0;
+    border-top: $color-line 1.5px solid;
+    text-align: center;
+    &:last-of-type {
+      border-bottom: $color-line 1.5px solid;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+//request
+
+.request {
+  @include inner();
+
+  &__content {
+    margin: 30px 0 150px;
+  }
+
+  &__title {
+    @include title();
+  }
+
+  &__info {
+    text-align: center;
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__sub {
+      margin-bottom: 20px;
+    }
+    &__content {
+      text-align: left;
+      background-color: $color-sub;
+      padding: 20px 18px;
+      border-radius: 10px;
+      @include sec_mb();
+      @include mq-pc() {
+        padding: 60px 70px;
+      }
+      &__top {
+        font-size: 16px;
+        color: $color-font-g;
+        margin-bottom: 12px;
+        // @include mq-pc() {
+        //   font-size: 20px;
+        // }
+      }
+
+      @include dl($fs: 14);
+    }
   }
 }

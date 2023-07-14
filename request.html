@@ -1,106 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
-    <link rel="stylesheet" href="./style/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link rel="stylesheet" href="./style/style.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__inner">
-            <div class="header__content">
-                <h1 class="header__title">
-                    <a href="./index.html">
-                        <img src="./img/meow3.gif" alt="名東区災害ボランティアセンター">
-                    </a>
-                </h1>
-                <nav class="header__other">
-                    <ul class="header__list">
-                        <li>
-                            <a href="" class="header__link">よくある質問</a>
-                        </li>
-                        <li>
-                            <a href="" class="header__link">お問合せ</a>
-                        </li>
-                    </ul>
-                </nav>
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__content">
+        <h1 class="header__title">
+          <a href="./index.html">
+            <img src="./img/meow3.gif" alt="名東区災害ボランティアセンター" />
+          </a>
+        </h1>
+        <nav class="header__other">
+          <ul class="header__list">
+            <li>
+              <a href="" class="header__link">よくある質問</a>
+            </li>
+            <li>
+              <a href="" class="header__link">お問合せ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__hum"></div>
+      <div class="header__content">
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__btn">
+              <a href="./about.html" class="header__link">私たちについて</a>
+            </li>
+            <li class="header__btn">
+              <a href="./" class="header__link">ボランティア内容</a>
+            </li>
+            <li class="header__btn">
+              <a href="./note" class="header__link">活動報告</a>
+            </li>
+            <li class="header__btn">
+              <a href="./invite.html" class="header__link">参加を希望する方へ</a>
+            </li>
+            <li class="header__btn">
+              <a href="./request.html" class="header__link">依頼を希望する方へ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="request">
+    <div class="request__inner">
+      <div class="bread">
+        <p><a href="./index.html">ホーム</a>依頼を希望する方へ</p>
+      </div>
+      <div class="request__content">
+        <h2 class="request__title">訓練やイベントを<br>希望する場合</h2>
+        <div class="request__info">
+          <p class="request__info__sub">本部である名東区社会福祉協議会にご相談ください。</p>
+          <div class="request__info__content">
+            <h4 class="request__info__content__top">
+              ご相談先
+            </h4>
+            <p></p>
+            <div class="request__info__content__address">
+              <h3 class="request__info__content__title">名東区社会福祉協議会<br>
+                地域担当の次長・防災担当主事</h3>
+              <p class="request__info__content__address">
+                〒465-0025<br />　名古屋市名東区上社1-802上社ターミナルビル2F
+              </p>
+              <div class="footer__">
+                <dl class="request__info__content__dl">
+                  <dt class="request__info__content__dt">TEL</dt>
+                  <dd class="request__info__content__dd">
+                    052-726-8664　<br />
+                    連絡可能時間（平日9:00-17:00）
+                  </dd>
+                </dl>
+                <dl class="request__info__content__dl">
+                  <dt class="request__info__content__dt">FAX</dt>
+                  <dd class="request__info__content__dd">052-726-8776</dd>
+                </dl>
+                <dl class="request__info__content__dl">
+                  <dt class="request__info__content__dt">メール</dt>
+                  <dd class="request__info__content__dd">mei10saigaivc@gmail.com</dd>
+                </dl>
+              </div>
             </div>
-            <div class="header__hum"></div>
-            <div class="header__content">
-                <nav class="header__nav">
-                    <ul class="header__list">
-                        <li class="header__btn">
-                            <a href="./about.html" class="header__link">私たちについて</a>
-                        </li>
-                        <li class="header__btn">
-                            <a href="./" class="header__link">ボランティア内容</a>
-                        </li>
-                        <li class="header__btn">
-                            <a href="./note" class="header__link">活動報告</a>
-                        </li>
-                        <li class="header__btn">
-                            <a href="./invite.html" class="header__link">参加を希望する方へ</a>
-                        </li>
-                        <li class="header__btn">
-                            <a href="./request.html" class="header__link">依頼を希望する方へ</a>
-                        </li>
-                    </ul>
-                </nav>
+          </div>
+          <div class="request__info">
+            <h3 class="request__info__title">災害時の相談をしたい場合</h3>
+            <p class="request__info__sub">災害後、被災地域の状況調査・被災された方からの聴き取り等も行っております。</p>
+            <div class="request__info__content">
+              <h4 class="request__info__content__top">
+                ご相談先
+              </h4>
+              <h3 class="request__info__content__title">名東区災害ボランティアの会</h3>
+              <dl class="request__info__content__dl">
+                <dt class="request__info__content__dt">メール</dt>
+                <dd class="request__info__content__dd">mei10saigaivc@gmail.com</dd>
+              </dl>
+              <p>ご相談内容によって、福祉避難所や医療機関などの紹介、専門職にお繋ぎいたします。</p>
             </div>
+          </div>
         </div>
-    </header>
-    <main class="request">
-        <div class="request__inner">
-            <div class="bread">
-                <p>HOME>依頼を希望する方へ</p>
-            </div>
-            <div class="request__content">
-                <h2 class="request__title">依頼を希望する方へ</h2>
-                <div class="request__info">
-                    <h3></h3>
-                    <p>名東区福祉協議会 地域担当の次長・防災担当主事にご相談ください。</p>
-                </div>
-                <div class="request__info">
-
-                </div>
-            </div>
+        <div class="link__content">
+          <p class="link__text">
+            その他ご不明な点がございましたら、<br />
+            お気軽にお問い合わせください。
+          </p>
+          <a href="" class="btn-c">お問合せフォーム</a>
         </div>
-    </main>
-    <footer class="footer">
-        <div class="footer__inner">
-            <div class="footer__content">
-                <div>
-                    <div class="footer__logo">
-                        <img class="" src="https://cdn.discordapp.com/emojis/544896826709377034.png?size=32" alt="">
-                    </div>
-                    <div class="footer__info">
-                        <p>メールとか</p>
-                    </div>
-                </div>
-                <div class="footer__nav">
-                    <ul>
-                        <li>私たちについて</li>
-                        <li>カーバンクル</li>
-                        <li>私たちについて</li>
-                        <li>私たちについて</li>
-                        <li>私たちについて</li>
-                    </ul>
-                    <ul>
-                        <li>私たちについて</li>
-                        <li>カーバンクル</li>
-                        <li>私たちについて</li>
-                        <li>私たちについて</li>
-                        <li>私たちについて</li>
-                    </ul>
-                </div>
-            </div>
-            <p style="text-align: center;">コピーライト</p>
+      </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__content">
+        <h2 class="footer__title">名東区のこれからを作る</h2>
+        <div class="footer__top">
+          <div class="footer__logo">
+            <img class="" src="https://cdn.discordapp.com/emojis/544896826709377034.png?size=32" alt="" />
+          </div>
+          <p>名東区災害ボランティアの会</p>
         </div>
-    </footer>
+        <div class="footer__flex">
+          <div class="footer__item">
+            <div class="footer__info">
+              <h3 class="footer__info__title">名東区社会福祉協議会</h3>
+              <p class="footer__info__address">
+                〒465-0025<br />
+                名古屋市名東区上社1-802上社ターミナルビル2F
+              </p>
+              <div class="footer__">
+                <dl class="footer__info__dl">
+                  <dt class="footer__info__dt">TEL</dt>
+                  <dd class="footer__info__dd">
+                    052-726-8664<br />
+                    連絡可能時間（平日9:00-17:00）
+                  </dd>
+                </dl>
+                <dl class="footer__info__dl">
+                  <dt class="footer__info__dt">FAX</dt>
+                  <dd class="footer__info__dd">052-726-8776</dd>
+                </dl>
+                <dl class="footer__info__dl">
+                  <dt class="footer__info__dt">メール</dt>
+                  <dd class="footer__info__dd">mei10saigaivc@gmail.com</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="footer__sns">
+              <a class="footer__sns__link" href="">
+                <img src="./img/twitter.svg" alt="" />
+              </a>
+              <a class="footer__sns__link" href="">
+                <img src="./img/logo.svg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="footer__nav">
+            <ul class="footer__nav__ul">
+              <li class="footer__nav__li">
+                <a href=""> 私たちについて </a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="">ボランティア内容 </a>
+              </li>
+              <li class="footer__nav__li"><a href="">活動報告</a></li>
+              <li class="footer__nav__li">
+                <a href="">参加を希望する方へ</a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="">依頼を希望する方へ</a>
+              </li>
+            </ul>
+            <ul class="footer__nav__ul">
+              <li class="footer__nav__li">
+                <a href="">よくある質問</a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="">お問い合わせ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__copy">
+          Copyright © mei10saigaivc. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
