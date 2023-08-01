@@ -189,20 +189,21 @@
       }
 
       .padding{
+        display: none;
         @include mq-tab(){
+          display: block;
           width: 100vw;
           height: 86px;
           background-color: $color-sub;
         }
-
       }
 
       //header
 
       .header {
         @include inner();
+        z-index: 20;
         @include mq-tab(){
-
           top: 0;
           left: 0;
           position: fixed;
@@ -212,7 +213,6 @@
             background-color: $color-font-g;
             z-index: 10;
           }
-
         }
         &__content {
           @include flex($jc: flex-end);
@@ -1215,6 +1215,7 @@
             & p {
               display: block;
               margin-left: 38px;
+              flex: 1;
             }
           }
           &__a {
@@ -1241,6 +1242,12 @@
               margin-top: 8px;
               flex: 1;
             }
+
+            & a{
+                display: inline;
+                text-decoration-line: underline;
+                color: $color-font-g;
+            }
           }
           &__o_s {
             width: 20px;
@@ -1262,6 +1269,10 @@
             }
           }
         }
+        &__inner{
+          @include sec_mb();
+        }
+
       }
 
       //contact
