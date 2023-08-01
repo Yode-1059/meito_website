@@ -10,56 +10,63 @@
 </head>
 
 <body>
+  <div class="padding"></div>
   <header class="header">
     <div class="header__inner">
-      <div class="header__content">
+      <div class="header__flex">
         <h1 class="header__title">
           <a href="./index.html">
-            <img src="./img/meow3.gif" alt="名東区災害ボランティアセンター" />
+            <img src="./img/logonokawari.png" alt="名東区災害ボランティアセンター" />
           </a>
         </h1>
-        <nav class="header__other">
-          <ul class="header__list">
-            <li>
-              <a href="" class="header__link">よくある質問</a>
-            </li>
-            <li>
-              <a href="" class="header__link">お問合せ</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__hum"></div>
-      <div class="header__content">
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__btn">
-              <a href="./about.html" class="header__link">私たちについて</a>
-            </li>
-            <li class="header__btn">
-              <a href="./" class="header__link">ボランティア内容</a>
-            </li>
-            <li class="header__btn">
-              <a href="./note" class="header__link">活動報告</a>
-            </li>
-            <li class="header__btn">
-              <a href="./invite.html" class="header__link">参加を希望する方へ</a>
-            </li>
-            <li class="header__btn">
-              <a href="./request.html" class="header__link">依頼を希望する方へ</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="header__index">
+          <div class="header__content">
+            <nav class="header__other">
+              <ul class="header__list">
+                <li>
+                  <a href="./question.html" class="header__link">よくある質問</a>
+                </li>
+                <span style="width: 1em;"></span>
+                <li>
+                  <a href="" class="header__link">お問い合せ</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__btn">
+                  <a href="#active" class="header__link">ボランティア内容</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./about.html" class="header__link">私たちについて</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./joing.html" class="header__link">参加を希望する方へ</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./request.html" class="header__link">依頼を希望する方へ</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./note" class="header__link">活動報告</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__hum">
+            <div class="header__hum__btn"></div>
+          </div>
+        </div>
       </div>
     </div>
+
   </header>
   <main class="request">
+    <h1 class="pages__title"><img class="pages__title__img" src="./parts/request.png" alt="依頼を希望する方へ"></h1>
     <div class="request__inner">
-      <div class="bread">
-        <p><a href="./index.html">ホーム</a>依頼を希望する方へ</p>
-      </div>
       <div class="request__content">
-        <h2 class="request__title">訓練やイベントを<br>希望する場合</h2>
+        <h2 class="request__title"><img class="request__title__img pc" src="./parts/request_1.png" alt="訓練やイベントを希望する場合">
+          <img class="request__title__img mb" src="./parts/request_1_mb.png" alt="訓練やイベントを希望する場合">
+        </h2>
         <div class="request__info">
           <p class="request__info__sub">本部である名東区社会福祉協議会にご相談ください。</p>
           <div class="request__info__content">
@@ -93,7 +100,10 @@
             </div>
           </div>
           <div class="request__info">
-            <h3 class="request__info__title">災害時の相談をしたい場合</h3>
+            <h2 class="request__title">
+              <img class="request__title__img pc" src="./parts/request_2.png" alt="災害時の相談をしたい場合">
+              <img class="request__title__img mb" src="./parts/request_2_mb.png" alt="災害時の相談をしたい場合">
+            </h2>
             <p class="request__info__sub">災害後、被災地域の状況調査・被災された方からの聴き取り等も行っております。</p>
             <div class="request__info__content">
               <h4 class="request__info__content__top">
@@ -116,6 +126,12 @@
           <a href="" class="btn-c">お問合せフォーム</a>
         </div>
       </div>
+    </div>
+    <div class="pages__bread">
+      <div class="pages__bread__inner">
+        <p class="pages__bread__content"><a href="./index.html">ホーム</a>　>　<span> 依頼を希望する方へ</span></p>
+      </div>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__inner">
@@ -165,25 +181,25 @@
           <div class="footer__nav">
             <ul class="footer__nav__ul">
               <li class="footer__nav__li">
-                <a href=""> 私たちについて </a>
+                <a href="./#active">ボランティア内容 </a>
               </li>
               <li class="footer__nav__li">
-                <a href="">ボランティア内容 </a>
+                <a href="./about.html"> 私たちについて </a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="./joing.html">参加を希望する方へ</a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="./request.html">依頼を希望する方へ</a>
               </li>
               <li class="footer__nav__li"><a href="">活動報告</a></li>
-              <li class="footer__nav__li">
-                <a href="">参加を希望する方へ</a>
-              </li>
-              <li class="footer__nav__li">
-                <a href="">依頼を希望する方へ</a>
-              </li>
             </ul>
             <ul class="footer__nav__ul">
               <li class="footer__nav__li">
-                <a href="">よくある質問</a>
+                <a href="./question.html">よくある質問</a>
               </li>
               <li class="footer__nav__li">
-                <a href="">お問い合わせ</a>
+                <a href="./contact.html">お問い合わせ</a>
               </li>
             </ul>
           </div>
@@ -195,5 +211,5 @@
     </div>
   </footer>
 </body>
-
+<script src="./script.js"></script>
 </html>

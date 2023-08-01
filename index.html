@@ -11,62 +11,75 @@
 </head>
 
 <body>
+  <div class="padding"></div>
   <header class="header">
     <div class="header__inner">
-      <div class="header__content">
+      <div class="header__flex">
         <h1 class="header__title">
-          <a href="#">
-            <img src="./img/meow3.gif" alt="名東区災害ボランティアセンター" />
+          <a href="./index.html">
+            <img src="./img/logonokawari.png" alt="名東区災害ボランティアセンター" />
           </a>
         </h1>
-        <nav class="header__other">
-          <ul class="header__list">
-            <li>
-              <a href="" class="header__link">よくある質問</a>
-            </li>
-            <li>
-              <a href="" class="header__link">お問合せ</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__hum"></div>
-      <div class="header__content">
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__btn">
-              <a href="./about.html" class="header__link">私たちについて</a>
-            </li>
-            <li class="header__btn">
-              <a href="#active" class="header__link">ボランティア内容</a>
-            </li>
-            <li class="header__btn">
-              <a href="./note" class="header__link">活動報告</a>
-            </li>
-            <li class="header__btn">
-              <a href="./joing.html" class="header__link">参加を希望する方へ</a>
-            </li>
-            <li class="header__btn">
-              <a href="./request.html" class="header__link">依頼を希望する方へ</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="header__index">
+          <div class="header__content">
+            <nav class="header__other">
+              <ul class="header__list">
+                <li>
+                  <a href="./question.html" class="header__link">よくある質問</a>
+                </li>
+                <span style="width: 1em;"></span>
+                <li>
+                  <a href="" class="header__link">お問い合せ</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__btn">
+                  <a href="#active" class="header__link">ボランティア内容</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./about.html" class="header__link">私たちについて</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./joing.html" class="header__link">参加を希望する方へ</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./request.html" class="header__link">依頼を希望する方へ</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./note" class="header__link">活動報告</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__hum">
+            <div class="header__hum__btn"></div>
+          </div>
+        </div>
       </div>
     </div>
+
   </header>
   <main>
     <section class="mainvisual">
       <div class="mainvisual__inner">
         <div class="mainvisual__content">
           <div class="mainvisual__flex">
-            <h2 class="mainvisual__catch">名東区のこれからを作る</h2>
             <div class="mainvisual__img">
-              <img class="" src="./img/IMG_3098 (集合写真).JPG" alt="メインビジュアル　集合写真" />
+              <img class="" style="object-fit: cover;aspect-ratio: 3/2;" src="./img/main.png"
+                alt="メインビジュアル　集合写真" />
+            </div>
+            <div class="mainvisual__catch">
+              <img src="./img/logonokawari.png" alt="">
+              <img style="width: 60%; margin-top: 40px;" src="./img/グループ 34.png" alt="">
             </div>
           </div>
         </div>
         <div class="mainvisual__content">
-          <h2 class="mainvisual__title">活動目的</h2>
+          <h2 class="mainvisual__title">
+            <img class="info__title__img" src="./parts/mainvisual.png" alt="活動目的">
+          </h2>
           <div class="mainvisual__txt">
             <p>
               私たちはケアの提供を通して<br />
@@ -79,26 +92,45 @@
     </section>
     <section class="active" id="active">
       <div class="active__inner">
-        <h2 class="active__title">ボランティア内容</h2>
+        <h2 class="active__title">
+          <img class="info__title__img" src="./parts/active.png" alt="ボランティア内容">
+        </h2>
         <div class="active__content">
           <div class="card">
             <div class="card__img">
-              <img src="https://api.capy.lol/v1/capybara" alt="" />
+              <img src="./img/card1.png" alt="" />
             </div>
             <div class="card__content">
               <div class="card__title">
-                <h3>イベント参加</h3>
+                <h3>地域土地調査・相談</h3>
               </div>
               <div class="card__text">
                 <p>
-                  日頃から災害に備える意識をもってもらうために、小学校や児童館に出向いて講義を開いています。
+                  避難訓練のコースを事前に点検し、避難経路の清掃活動を行っています。
                 </p>
+                <p>災害後、被災地域の状況調査や聞き取り調査をしています。</p>
               </div>
             </div>
           </div>
           <div class="card">
             <div class="card__img">
-              <img src="https://api.capy.lol/v1/capybara" alt="" />
+              <img src="./img/card2.png" alt="" />
+            </div>
+            <div class="card__content">
+              <div class="card__title">
+                <h3>訓練の運営</h3>
+              </div>
+              <div class="card__text">
+                <p>
+                  地域の方が参加する防災訓練では、防災に関する正しい知識を身につけ、過去の自然災害からの学びや備えを共有しています。
+                </p>
+                <p>名東区にお住まいの方の防災教育をすることで、地域全体の防災力を上げる目的があります。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card3.png" alt="" />
             </div>
             <div class="card__content">
               <div class="card__title">
@@ -106,8 +138,42 @@
               </div>
               <div class="card__text">
                 <p>
-                  日頃から災害に備える意識をもってもらうために、小学校や児童館に出向いて講義を開いています。
+                    名東区内のイベントに参加し、地域の方との交流の場を大切にしています。
                 </p>
+                <p>もしもを想定した災害体験、防災グッズを作るワークショップなど、日頃から災害に備える意識をもってもらうためのブースを設置しています。</p>
+                <p>毎年、開催される「名東区福祉まつり」では、わたしたちのボランティア活動を知っていただくために、紹介パネルを展示しています。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card4.png" alt="" />
+            </div>
+            <div class="card__content">
+              <div class="card__title">
+                <h3>防災関連の啓発</h3>
+              </div>
+              <div class="card__text">
+                <p>
+                  防災グッズの展示やノベルティーの制作・パネルや資料作成をし、防災啓発活動を行っています。
+                </p>
+                <p>小学校や児童館では、絵本やワークショップで、災害を身近に感じられるような講座授業を行っています。</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="./img/card5.png" alt="" />
+            </div>
+            <div class="card__content">
+              <div class="card__title">
+                <h3>会議に出席</h3>
+              </div>
+              <div class="card__text">
+                <p>
+                  毎月の「名古屋市災害ボランティア連絡会定例会」に出席し、情報を共有することで、名古屋市全体との繋がりを大切にしています。
+                </p>
+                <p>また、地域福祉活動のプロジェクトに携わっています。</p>
               </div>
             </div>
           </div>
@@ -118,7 +184,7 @@
       <div class="info__inner">
         <div class="info__content">
           <div class="info__note">
-            <h2 class="info__title">活動報告</h2>
+            <h2 class="info__title"><img class="info__title__img" src="./parts/report.png" alt="活動報告"></h2>
             <p class="info__txt">Noteにて活動の記録を投稿しています</p>
             <div class="info__list">
               <ul class="info__list__ul">
@@ -127,7 +193,7 @@
             <a href="#" class="btn">noteで詳しく見る</a>
           </div>
           <div class="info__twitter">
-            <h2 class="info__title">Twitter</h2>
+            <h2 class="info__title"><img class="info__title__img" src="./parts/twitter.png" alt="Twitter"></h2>
             <p class="info__txt">
               災害の最新情報や、お役立ち情報を発信しています。
             </p>
@@ -188,25 +254,25 @@
           <div class="footer__nav">
             <ul class="footer__nav__ul">
               <li class="footer__nav__li">
-                <a href=""> 私たちについて </a>
+                <a href="#active">ボランティア内容 </a>
               </li>
               <li class="footer__nav__li">
-                <a href="">ボランティア内容 </a>
+                <a href="./about.html"> 私たちについて </a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="./joing.html">参加を希望する方へ</a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="./request.html">依頼を希望する方へ</a>
               </li>
               <li class="footer__nav__li"><a href="">活動報告</a></li>
-              <li class="footer__nav__li">
-                <a href="">参加を希望する方へ</a>
-              </li>
-              <li class="footer__nav__li">
-                <a href="">依頼を希望する方へ</a>
-              </li>
             </ul>
             <ul class="footer__nav__ul">
               <li class="footer__nav__li">
-                <a href="">よくある質問</a>
+                <a href="./question.html">よくある質問</a>
               </li>
               <li class="footer__nav__li">
-                <a href="">お問い合わせ</a>
+                <a href="./contact.html">お問い合わせ</a>
               </li>
             </ul>
           </div>

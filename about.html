@@ -10,71 +10,75 @@
 </head>
 
 <body>
+  <div class="padding"></div>
   <header class="header">
     <div class="header__inner">
-      <div class="header__content">
+      <div class="header__flex">
         <h1 class="header__title">
           <a href="./index.html">
-            <img src="./img/meow3.gif" alt="名東区災害ボランティアセンター" />
+            <img src="./img/logonokawari.png" alt="名東区災害ボランティアセンター" />
           </a>
         </h1>
-        <nav class="header__other">
-          <ul class="header__list">
-            <li>
-              <a href="" class="header__link">よくある質問</a>
-            </li>
-            <li>
-              <a href="" class="header__link">お問合せ</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__hum"></div>
-      <div class="header__content">
-        <nav class="header__nav">
-          <ul class="header__list">
-            <li class="header__btn">
-              <a href="./about.html" class="header__link">私たちについて</a>
-            </li>
-            <li class="header__btn">
-              <a href="./" class="header__link">ボランティア内容</a>
-            </li>
-            <li class="header__btn">
-              <a href="./note" class="header__link"> 活動報告 </a>
-            </li>
-            <li class="header__btn">
-              <a href="./joing.html" class="header__link">
-                参加を希望する方へ
-              </a>
-            </li>
-            <li class="header__btn">
-              <a href="./request.html" class="header__link">
-                依頼を希望する方へ
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div class="header__index">
+          <div class="header__content">
+            <nav class="header__other">
+              <ul class="header__list">
+                <li>
+                  <a href="./question.html" class="header__link">よくある質問</a>
+                </li>
+                <span style="width: 1em;"></span>
+                <li>
+                  <a href="" class="header__link">お問い合せ</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__btn">
+                  <a href="#active" class="header__link">ボランティア内容</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./about.html" class="header__link">私たちについて</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./joing.html" class="header__link">参加を希望する方へ</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./request.html" class="header__link">依頼を希望する方へ</a>
+                </li>
+                <li class="header__btn">
+                  <a href="./note" class="header__link">活動報告</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__hum">
+            <div class="header__hum__btn"></div>
+          </div>
+        </div>
       </div>
     </div>
+
   </header>
   <main class="about">
+    <h1 class="pages__title"><img class="pages__title__img" src="./parts/about.png" alt="私たちについて"></h1>
     <div class="about__inner">
-      <div class="bread">
-        <a href="./index.html">ホーム</a> > 私たちについて
-      </div>
-      <h2 class="about__title">私たちについて</h2>
       <section class="aboutus">
         <div class="aboutus__content">
-          <img src="./img/IMG_3098 (集合写真).JPG" alt="" />
+          <!-- <img src="./img/IMG_3098 (集合写真).JPG" alt="" /> -->
           <div>
             <div class="aboutus__content">
-              <h2 class="aboutus__title">活動目標</h2>
+              <h2 class="aboutus__title">
+                <img class="process__title__img" src="./parts/about_1.png" alt="団体概要">
+              </h2>
               <p class="aboutus__txet">
                 めいとうくのこれからをつくる
               </p>
             </div>
             <div class="aboutus__content">
-              <h2 class="aboutus__title">活動目的</h2>
+              <h2 class="aboutus__title">
+                <img class="process__title__img" src="./parts/mainvisual.png" alt="活動目的">
+              </h2>
               <p class="aboutus__txet">
                 わたしたちはけあのていきょうをとおして<br />
                 ぎとびとのしあわせなじんせいにほうしします
@@ -83,7 +87,7 @@
       </section>
       <section class="feel">
         <div class="feel__inner">
-          <h2 class="feel__title">メンバーの想い</h2>
+          <h2 class="feel__title"><img class="process__title__img" src="./parts/fell.png" alt="メンバーの想い"></h2>
           <div class="feel__content">
             <p class="feel__text">ねこだからわかんにゃい</p>
             <p class="feel__name">メンバー代表 blobcat</p>
@@ -91,7 +95,7 @@
         </div>
       </section>
       <section class="summary">
-        <h2 class="summary__title">団体概要</h2>
+        <h2 class="summary__title"><img class="process__title__img" src="./parts/summary.png" alt="団体概要"></h2>
         <div class="summary__state">
           <dl class="summary__dl">
             <dt class="summary__dt">団体名</dt>
@@ -132,8 +136,7 @@
         <div class="map">
           <iframe class="map__iframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.3117400914807!2d137.00390337553046!3d35.17378195768305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003656596f58dbf%3A0x85621291b2077d16!2z5ZCN5Y-k5bGL5biC5ZCN5p2x5Yy656S-5Lya56aP56WJ5Y2U6K2w5Lya!5e0!3m2!1sja!2sjp!4v1688698476695!5m2!1sja!2sjp"
-            width="100%" height="280px" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </section>
@@ -160,6 +163,11 @@
           <a href="" class="btn-c">おといあわせ</a>
         </div>
       </section>
+    </div>
+    <div class="pages__bread">
+      <div class="pages__bread__inner">
+        <p class="pages__bread__content"><a href="./index.html">ホーム</a>　>　<span> 私たちについて</span></p>
+      </div>
     </div>
   </main>
   <footer class="footer">
@@ -210,25 +218,25 @@
           <div class="footer__nav">
             <ul class="footer__nav__ul">
               <li class="footer__nav__li">
-                <a href=""> 私たちについて </a>
+                <a href="./#active">ボランティア内容 </a>
               </li>
               <li class="footer__nav__li">
-                <a href="">ボランティア内容 </a>
+                <a href="./about.html"> 私たちについて </a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="./joing.html">参加を希望する方へ</a>
+              </li>
+              <li class="footer__nav__li">
+                <a href="./request.html">依頼を希望する方へ</a>
               </li>
               <li class="footer__nav__li"><a href="">活動報告</a></li>
-              <li class="footer__nav__li">
-                <a href="">参加を希望する方へ</a>
-              </li>
-              <li class="footer__nav__li">
-                <a href="">依頼を希望する方へ</a>
-              </li>
             </ul>
             <ul class="footer__nav__ul">
               <li class="footer__nav__li">
-                <a href="">よくある質問</a>
+                <a href="./question.html">よくある質問</a>
               </li>
               <li class="footer__nav__li">
-                <a href="">お問い合わせ</a>
+                <a href="./contact.html">お問い合わせ</a>
               </li>
             </ul>
           </div>
@@ -240,5 +248,5 @@
     </div>
   </footer>
 </body>
-
+<script src="./script.js"></script>
 </html>
