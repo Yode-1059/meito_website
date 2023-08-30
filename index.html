@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>名東区災害ボランティアセンター</title>
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
   <link rel="stylesheet" href="./style/style.css" />
   <script src="https://kit.fontawesome.com/9507bce07d.js" crossorigin="anonymous"></script>
@@ -15,9 +15,9 @@
   <header class="header">
     <div class="header__inner">
       <div class="header__flex">
-        <h1 class="header__title">
-          <a href="./index.html">
-            <img src="./img/logonokawari.png" alt="名東区災害ボランティアセンター" />
+        <h1 class="header__title unpop">
+          <a href="#">
+          <img src="./parts/logo.svg" alt="名東区災害ボランティアセンター" />
           </a>
         </h1>
         <div class="header__index">
@@ -29,14 +29,14 @@
                 </li>
                 <span style="width: 1em;"></span>
                 <li>
-                  <a href="./contact.html" class="header__link">お問い合せ</a>
+                  <a href="./contact.html" target="_blank" class="header__link">お問い合わせ</a>
                 </li>
               </ul>
             </nav>
             <nav class="header__nav">
               <ul class="header__list">
                 <li class="header__btn">
-                  <a href="./index.html#active" class="header__link">ボランティア内容</a>
+                  <a href="./index.html#active" id="hum_close" class="header__link">ボランティア内容</a>
                 </li>
                 <li class="header__btn">
                   <a href="./about.html" class="header__link">私たちについて</a>
@@ -48,7 +48,7 @@
                   <a href="./request.html" class="header__link">依頼を希望する方へ</a>
                 </li>
                 <li class="header__btn">
-                  <a href="./note" class="header__link">活動報告</a>
+                  <a href="https://note.com/test_hosta518/" class="header__link" target="_blank">活動報告</a>
                 </li>
               </ul>
             </nav>
@@ -68,11 +68,11 @@
           <div class="mainvisual__flex">
             <div class="mainvisual__img">
               <img class="" style="object-fit: cover;aspect-ratio: 3/2;" src="./img/main.png"
-                alt="メインビジュアル　集合写真" />
+              alt="メインビジュアル　集合写真" />
             </div>
             <div class="mainvisual__catch">
-              <img src="./img/logonokawari.png" alt="">
-              <img style="width: 60%; margin-top: 40px;" src="./img/グループ 34.png" alt="">
+              <img class="mainvisual__catch__logo" src="./parts/logo.svg" alt="">
+              <img class="mainvisual__catch__img"  src="./parts/main_name.png" alt="">
             </div>
           </div>
         </div>
@@ -82,11 +82,13 @@
           </h2>
           <div class="mainvisual__txt">
             <p>
-              私たちはケアの提供を通して<br />
-              人々の幸せな人生に奉仕します。
+              大災害時には災害ボランティアセンターの運営に携わり、
+              平常時には住民の災害時に向けた啓発活動に携わります。
             </p>
+            <p>また、行政・社協・市内の災害ボランティア団体と災害に関する訓練・研修や
+              連絡会に参加しています。</p>
           </div>
-          <a class="btn" href="#">わたしたちについて、詳しく見る</a>
+          <a class="btn" href="./about.html">私たちについて、詳しく見る</a>
         </div>
       </div>
     </section>
@@ -97,13 +99,12 @@
         </h2>
         <div class="active__content">
           <div class="card">
-            <div class="card__img">
-              <img src="./img/card1.png" alt="" />
+            <div class="card__img" style="background-image: url(./img/card1.jpg);">
             </div>
             <div class="card__content">
-              <div class="card__title">
-                <h3>地域土地調査・相談</h3>
-              </div>
+              <h3 class="card__title">
+                地域土地調査・相談
+              </h3>
               <div class="card__text">
                 <p>
                   避難訓練のコースを事前に点検し、避難経路の清掃活動を行っています。
@@ -113,13 +114,12 @@
             </div>
           </div>
           <div class="card">
-            <div class="card__img">
-              <img src="./img/card2.png" alt="" />
+            <div class="card__img" style="background-image: url(./img/card2.jpg);">
             </div>
             <div class="card__content">
-              <div class="card__title">
-                <h3>訓練の運営</h3>
-              </div>
+              <h3 class="card__title">
+                訓練の運営
+              </h3>
               <div class="card__text">
                 <p>
                   地域の方が参加する防災訓練では、防災に関する正しい知識を身につけ、過去の自然災害からの学びや備えを共有しています。
@@ -129,16 +129,15 @@
             </div>
           </div>
           <div class="card">
-            <div class="card__img">
-              <img src="./img/card3.png" alt="" />
+            <div class="card__img" style="background-image: url(./img/card3.jpg);">
             </div>
             <div class="card__content">
-              <div class="card__title">
-                <h3>イベント参加</h3>
-              </div>
+              <h3 class="card__title">
+                イベント参加
+              </h3>
               <div class="card__text">
                 <p>
-                    名東区内のイベントに参加し、地域の方との交流の場を大切にしています。
+                  名東区内のイベントに参加し、地域の方との交流の場を大切にしています。
                 </p>
                 <p>もしもを想定した災害体験、防災グッズを作るワークショップなど、日頃から災害に備える意識をもってもらうためのブースを設置しています。</p>
                 <p>毎年、開催される「名東区福祉まつり」では、わたしたちのボランティア活動を知っていただくために、紹介パネルを展示しています。</p>
@@ -146,13 +145,12 @@
             </div>
           </div>
           <div class="card">
-            <div class="card__img">
-              <img src="./img/card4.png" alt="" />
+            <div class="card__img" style="background-image: url(./img/card4.jpg);">
             </div>
             <div class="card__content">
-              <div class="card__title">
-                <h3>防災関連の啓発</h3>
-              </div>
+              <h3 class="card__title">
+                防災関連の啓発
+              </h3>
               <div class="card__text">
                 <p>
                   防災グッズの展示やノベルティーの制作・パネルや資料作成をし、防災啓発活動を行っています。
@@ -162,13 +160,12 @@
             </div>
           </div>
           <div class="card">
-            <div class="card__img">
-              <img src="./img/card5.png" alt="" />
+            <div class="card__img" style="background-image: url(./img/card5.jpg);">
             </div>
             <div class="card__content">
-              <div class="card__title">
-                <h3>会議に出席</h3>
-              </div>
+              <h3 class="card__title">
+                会議に出席
+              </h3>
               <div class="card__text">
                 <p>
                   毎月の「名古屋市災害ボランティア連絡会定例会」に出席し、情報を共有することで、名古屋市全体との繋がりを大切にしています。
@@ -190,29 +187,34 @@
               <ul class="info__list__ul">
               </ul>
             </div>
-            <a href="#" class="btn">noteで詳しく見る</a>
+            <a href="https://note.com/test_hosta518/" target="_blank" class="btn info__note__btn"><p>noteで詳しく見る</p></a>
           </div>
           <div class="info__twitter">
             <h2 class="info__title"><img class="info__title__img" src="./parts/twitter.png" alt="Twitter"></h2>
             <p class="info__txt">
               災害の最新情報や、お役立ち情報を発信しています。
             </p>
-            <div class="twitter">
-              <a class="twitter-timeline" data-lang="ja" data-height="500px"
-                href="https://twitter.com/miidarakusomusi?ref_src=twsrc%5Etfw">Tweets by miidarakusomusi</a>
+            <div class="zwtwitter">
+              <a class="twitter-timeline" href="https://twitter.com/4q7kfQu3XZnA25e?ref_src=twsrc%5Etfw" data-height="600px" >Tweets by 名東区災害ボランティアコーディネーター</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" ></script>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="pages__bread">
+      <div class="pages__bread__inner">
+        <p class="pages__bread__content"><a href="./index.html">ホーム</a>　></p>
+      </div>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__content">
-        <h2 class="footer__title">名東区のこれからを作る</h2>
+        <h2 class="footer__title"><img class="footer__title__img" src="./parts/footer__catch.png" alt="名東区のこれからを作る"></h2>
         <div class="footer__top">
           <div class="footer__logo">
-            <img class="" src="https://cdn.discordapp.com/emojis/544896826709377034.png?size=32" alt="" />
+            <img class="" src="./parts/logo.svg" alt="名東区災害ボランティアの会" />
           </div>
           <p>名東区災害ボランティアの会</p>
         </div>
@@ -243,18 +245,18 @@
               </div>
             </div>
             <div class="footer__sns">
-              <a class="footer__sns__link" href="">
-                <img src="./img/twitter.svg" alt="" />
+              <a class="footer__sns__link" href="https://twitter.com/4q7kfQu3XZnA25e" target="_blank">
+                <img src="./img/twitter.svg" alt="Twitterリンク" />
               </a>
-              <a class="footer__sns__link" href="">
-                <img src="./img/logo.svg" alt="" />
+              <a class="footer__sns__link" href="https://note.com/test_hosta518/" target="_blank">
+                <img src="./img/logo.svg" alt="noteリンク" />
               </a>
             </div>
           </div>
           <div class="footer__nav">
             <ul class="footer__nav__ul">
               <li class="footer__nav__li">
-                <a href="#active">ボランティア内容 </a>
+                <a href="index.html#active">ボランティア内容 </a>
               </li>
               <li class="footer__nav__li">
                 <a href="./about.html"> 私たちについて </a>
@@ -265,14 +267,14 @@
               <li class="footer__nav__li">
                 <a href="./request.html">依頼を希望する方へ</a>
               </li>
-              <li class="footer__nav__li"><a href="">活動報告</a></li>
+              <li class="footer__nav__li"><a href="https://note.com/test_hosta518/" >活動報告</a></li>
             </ul>
             <ul class="footer__nav__ul">
               <li class="footer__nav__li">
                 <a href="./question.html">よくある質問</a>
               </li>
               <li class="footer__nav__li">
-                <a href="./contact.html">お問い合わせ</a>
+                <a href="./contact.html" target="_blank">お問い合わせ</a>
               </li>
             </ul>
           </div>
